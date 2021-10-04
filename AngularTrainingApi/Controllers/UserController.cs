@@ -69,5 +69,29 @@ namespace AngularTrainingApi.Controllers
                 }
             };
         }
+
+        [HttpPost]
+        [Route("combo")]
+        public IEnumerable<ComboItem> Combo([FromBody] object query)
+        {
+            return new List<ComboItem>()
+            {
+                new ComboItem()
+                {
+                    Id = 1,
+                    Text = "Luís Henrique Mandetta"
+                },
+                new ComboItem()
+                {
+                    Id = 2,
+                    Text = "Henrique Meirelles"
+                },
+                new ComboItem()
+                {
+                    Id = 3,
+                    Text = "Everaldo Meirelles"
+                }
+            };
+        }
     }
 }
